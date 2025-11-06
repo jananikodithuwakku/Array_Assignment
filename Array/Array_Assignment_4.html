@@ -1,0 +1,17 @@
+<script>
+    let numbers = []; // empty array
+    let total = 0;    // to store total
+
+    for (let i = 1; i <= 10; i++) {
+        let num = Number(prompt("Enter number " + i + ":"));
+        numbers.push(num);  // add number to array
+        total += num;       // add to total
+    }
+
+    let average = total / 10;
+
+    console.log("Numbers:", numbers);
+    console.log("Total:", total);
+    console.log("Average:", average);
+
+</script>

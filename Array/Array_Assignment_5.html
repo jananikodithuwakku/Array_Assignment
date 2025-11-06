@@ -1,0 +1,18 @@
+<script>
+    let paragraph = prompt("Enter a paragraph:");
+    let words = paragraph.split(" ");
+    let uniqueWords = []; // empty array
+
+    // Loop through the words and push only non-duplicate ones
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        if (!uniqueWords.includes(word)) {
+            uniqueWords.push(word);
+        }
+    }
+
+    // Sort the summarized array in alphabetical order
+    uniqueWords.sort();
+    console.log("Unique words:", uniqueWords);
+
+</script>
