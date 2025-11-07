@@ -1,3 +1,32 @@
 <script>
+    let input = prompt("Enter numbers separated by commas (e.g., 12,13,15,27):");
+    let stringArray = input.split(",");
 
+    let numbers = stringArray.map(function (num) { // transforms each item
+        return parseInt(num);
+    });
+
+    console.log("Numbers array:", numbers);
+
+    let hasOdd = numbers.some(function (num) {  // checks if any match
+        return num % 2 !== 0;
+    });
+
+    if (hasOdd) {
+        console.log("Odd numbers available");
+    }
+
+    let allEven = numbers.every(function (num) {  // checks if all match
+        return num % 2 === 0;
+    });
+
+    if (allEven) {
+        console.log("All numbers are even");
+    }
+
+    let smallerThanTen = numbers.filter(function (num) { // keeps matching items
+        return num < 10;
+    });
+
+    console.log("Numbers smaller than 10:", smallerThanTen);
 </script>
